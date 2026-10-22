@@ -79,7 +79,7 @@ Being upfront about this:
 | | Status |
 | --- | --- |
 | macOS app | Built and run on Apple Silicon with macOS 26. The real shortcut was held, a slice chosen and the app brought to the front; unit tests and an end-to-end smoke test pass. Intel Macs and older macOS versions are untested. Windows mode (Accessibility) is **not yet tried**. |
-| Windows app | Compiles, and its logic (slice geometry, ordering, shortcut handling, settings) is covered by unit tests on every push. The wheel window and the window switching have **not been tried by hand on a real Windows PC yet**. CI also runs a best-effort end-to-end check, which hosted runners may not support. |
+| Windows app | Compiles, and its logic (slice geometry, ordering, shortcut handling, settings) is covered by unit tests on every push. CI also runs `Whirl.exe --self-test` on a real `windows-2025` machine: it opens the real wheel over two Notepad windows and checks that Windows brings the chosen one to the front. That run has not been repeated by a person. **The keyboard shortcut itself (the Ctrl + Alt + Tab hook) and the feel of the wheel have not been tried on a real Windows PC yet.** |
 
 If something misbehaves on Windows, please [open an issue](../../issues/new/choose).
 

@@ -30,11 +30,8 @@ jobs:
       - name: Build
         run: macos/build.sh
 
-      # Opens the real wheel and switches between Calculator and TextEdit. It needs a window
-      # server session, which hosted runners may not give us, so a failure here is reported
-      # but does not block the build. It always passes on a normal Mac.
+      # Opens the real wheel and switches between Calculator and TextEdit.
       - name: End-to-end smoke test
-        continue-on-error: true
         run: macos/scripts/smoke-test.sh
 
   windows:
@@ -57,10 +54,8 @@ jobs:
         run: dotnet test --solution windows/Whirl.slnx -c Release --no-build
 
       # Opens the real wheel over two Notepad windows and checks Windows reports the chosen one
-      # as the foreground window. Foreground rules on hosted runners are unpredictable, so a
-      # failure is reported but does not block the build.
-      - name: End-to-end smoke test (best effort)
-        continue-on-error: true
+      # as the foreground window.
+      - name: End-to-end smoke test
         shell: pwsh
         run: |
           $exe = Get-ChildItem windows/src/Whirl/bin/Release -Recurse -Filter Whirl.exe | Select-Object -First 1
