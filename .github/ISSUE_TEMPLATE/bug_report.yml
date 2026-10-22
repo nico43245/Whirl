@@ -1,0 +1,24 @@
+name: Bug report
+description: Something doesn't work as expected
+labels: [bug]
+body:
+  - type: textarea
+    attributes:
+      label: What happened?
+      description: What you did, what you expected, and what happened instead.
+    validations:
+      required: true
+  - type: dropdown
+    attributes:
+      label: Platform
+      options: [macOS, Windows]
+    validations:
+      required: true
+  - type: input
+    attributes:
+      label: Whirl and OS version
+      placeholder: Whirl 1.0.0 on macOS 15.3 / Windows 11 24H2
+  - type: input
+    attributes:
+      label: Shortcut and mode
+      description: Which shortcut you hold, and whether slices show Apps or Windows.

@@ -1,0 +1,35 @@
+<Window x:Class="Whirl.PreferencesWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="Whirl Preferences" Width="520" SizeToContent="Height" ResizeMode="NoResize"
+        WindowStartupLocation="CenterScreen" FontFamily="Segoe UI">
+    <StackPanel Margin="20">
+        <TextBlock Text="Wheel" FontSize="15" FontWeight="SemiBold" Margin="0,0,0,6" />
+        <DockPanel Margin="0,2">
+            <TextBlock Text="Hold to open" Width="120" VerticalAlignment="Center" />
+            <ComboBox x:Name="HotkeyPicker" DisplayMemberPath="Title" SelectedValuePath="Id" Width="220" HorizontalAlignment="Left" />
+        </DockPanel>
+        <TextBlock Text="If Windows shows its own task view instead, pick another shortcut." FontSize="11" Opacity="0.6" Margin="120,2,0,6" />
+        <DockPanel Margin="0,2">
+            <TextBlock Text="Slices show" Width="120" VerticalAlignment="Center" />
+            <RadioButton x:Name="ModeApps" Content="Apps" GroupName="mode" Margin="0,0,16,0" VerticalAlignment="Center" />
+            <RadioButton x:Name="ModeWindows" Content="Windows" GroupName="mode" VerticalAlignment="Center" />
+        </DockPanel>
+        <CheckBox x:Name="QuickTap" Content="Quick tap jumps back to the previous app" Margin="0,8,0,2" />
+        <CheckBox x:Name="StartWithWindows" Content="Start with Windows" Margin="0,2" />
+
+        <TextBlock Text="Pinned apps" FontSize="15" FontWeight="SemiBold" Margin="0,18,0,6" />
+        <TextBlock Text="Pinned apps take the first slices, in the order you pin them, even when closed (choosing one launches it). Windows mode ignores pins."
+                   TextWrapping="Wrap" FontSize="11" Opacity="0.6" Margin="0,0,0,6" />
+        <ListBox x:Name="PinnedList" DisplayMemberPath="Name" Height="90" />
+        <StackPanel Orientation="Horizontal" Margin="0,6,0,0">
+            <Button Content="Add app…" Click="AddApp" Padding="12,2" />
+            <Button Content="Remove" Click="RemoveApp" Padding="12,2" Margin="8,0,0,0" />
+        </StackPanel>
+
+        <TextBlock Text="Look" FontSize="15" FontWeight="SemiBold" Margin="0,18,0,6" />
+        <ComboBox x:Name="ThemePicker" DisplayMemberPath="Label" SelectedValuePath="Id" Width="240" HorizontalAlignment="Left" />
+
+        <Button Content="Done" IsDefault="True" Click="Done" HorizontalAlignment="Right" Padding="18,4" Margin="0,20,0,0" />
+    </StackPanel>
+</Window>

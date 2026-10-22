@@ -1,0 +1,9 @@
+<Solution>
+  <Folder Name="/src/">
+    <Project Path="src/Whirl.Core/Whirl.Core.csproj" />
+    <Project Path="src/Whirl/Whirl.csproj" />
+  </Folder>
+  <Folder Name="/tests/">
+    <Project Path="tests/Whirl.Core.Tests/Whirl.Core.Tests.csproj" />
+  </Folder>
+</Solution>
