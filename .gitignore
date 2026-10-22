@@ -13,3 +13,6 @@ windows/publish/
 
 # Release output
 dist/
+
+# Promo video sources and renders stay on this machine
+promo/

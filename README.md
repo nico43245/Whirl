@@ -1,24 +1,51 @@
 <p align="center">
-  <img src="docs/wheel-tangerine.png" width="300" alt="The Whirl wheel, Liquid Tangerine theme">
-  <img src="docs/wheel-neon.png" width="300" alt="The Whirl wheel, Cyber Neon theme">
+  <picture>
+    <source media="(prefers-color-scheme: dark)" srcset="docs/logo-light.png">
+    <img src="docs/logo-dark.png" width="460" alt="Whirl">
+  </picture>
 </p>
 
-<h1 align="center">Whirl</h1>
+<h3 align="center">Your apps, one flick away.</h3>
 
 <p align="center">
-  <b>Hold a key. Flick toward an app. Let go.</b><br>
-  A free, open-source radial app switcher for macOS and Windows that works entirely on your computer.
+  Hold a key, flick toward an app, let go. A free, open-source radial app switcher<br>
+  for macOS and Windows that works entirely on your computer.
 </p>
 
 <p align="center">
-  <a href="../../releases/latest">Download</a> ·
+  <a href="https://github.com/nico43245/Whirl/actions/workflows/ci.yml"><img alt="CI" src="https://github.com/nico43245/Whirl/actions/workflows/ci.yml/badge.svg"></a>
+  <a href="LICENSE"><img alt="MIT license" src="https://img.shields.io/badge/license-MIT-8b6cff"></a>
+  <img alt="macOS 14+ and Windows 10/11" src="https://img.shields.io/badge/macOS%2014%2B%20%C2%B7%20Windows%2010%2F11-181826">
+  <img alt="No telemetry, no network" src="https://img.shields.io/badge/telemetry-none-2ea44f">
+</p>
+
+<p align="center">
+  <a href="../../releases/latest"><b>Download</b></a> ·
   <a href="#install">Install</a> ·
   <a href="#permissions-and-privacy">Permissions & privacy</a> ·
   <a href="#build-from-source">Build from source</a> ·
   <a href="#română">Română</a>
 </p>
 
+<p align="center">
+  <a href="docs/whirl-demo.mp4"><img src="docs/demo.gif" width="760" alt="Whirl demo: hold the shortcut, flick to an app, let go"></a><br>
+  <sub>Illustrated demo (<a href="docs/whirl-demo.mp4">watch the full video</a>). The gesture is the real one; the windows are generic.</sub>
+</p>
+
 ---
+
+## Why Whirl
+
+- **One gesture, no list to read.** Your hand already knows where the app is: top, left, bottom right. Icons and names are right under the cursor.
+- **Same wheel on Mac and Windows**, with the same shortcut, themes and behaviour.
+- **Nothing to trust.** No network, no accounts, no telemetry. On a Mac, the default mode needs no permission at all.
+- **Free and open source** (MIT), from the author of [DragWheel](https://github.com/nico43245/DragWheel).
+
+## How it works
+
+1. **Hold** ⌥ Tab (Mac) or Ctrl + Alt + Tab (Windows). A wheel of eight slices opens under your cursor.
+2. **Flick** toward an app. The slice lights up, and the middle names it.
+3. **Release.** That app comes to the front.
 
 ## What it does
 
@@ -33,7 +60,14 @@ Hold **⌥ Tab** (Mac) or **Ctrl + Alt + Tab** (Windows). A wheel of eight slice
 - **Windows mode (optional).** One slice per window instead of per app.
 - **Five themes**, the same as [DragWheel](https://github.com/nico43245/DragWheel).
 
-Whirl is by the author of DragWheel: same wheel, new tool.
+## Themes
+
+Five finishes, shared with DragWheel. Pick one from the menu bar or tray icon.
+
+<p align="center">
+  <img src="docs/wheel-tangerine.png" width="320" alt="Whirl wheel, Liquid Tangerine theme">
+  <img src="docs/wheel-neon.png" width="320" alt="Whirl wheel, Cyber Neon theme">
+</p>
 
 ## Install
 
