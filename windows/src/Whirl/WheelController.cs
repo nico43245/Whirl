@@ -77,11 +77,11 @@ internal sealed class WheelController
     {
         if (!IsOpen) return;
         _timer.Stop();
+        var target = Model.HoveredItem;   // read before hiding: hiding clears the hover
         WheelWindow.Instance.HideNow();
         Closed?.Invoke();
         if (!commit) return;
 
-        var target = Model.HoveredItem;
         if (target is null && allowQuickTap && Core.Settings.Current.QuickTapSwitchesBack)
         {
             GetCursorPos(out var now);
